@@ -1,4 +1,4 @@
-# xrandr_brightness_script
+# XRAND brightness script for Ubuntu
 Script to increase/decrease of brightness for desired monitor by using xrandr.
 
 ### Usage:
