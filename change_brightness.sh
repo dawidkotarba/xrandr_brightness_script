@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Usage:
+# Increase brightness for first monitor: change_brightness 1 up
+# Decrease brightness for second monitor: change_brightness 2 down
+
 function get_monitor_name(){
     local monitor_number=$1
     echo `xrandr --verbose | grep '.*\sconnected' | cut -d " " -f 1 | head -n ${monitor_number} | tail -1`
@@ -26,6 +30,4 @@ function change_brightness(){
         xrandr --output ${monitor_name} --brightness ${new_brightness}
 }
 
-# Increase brightness for first monitor: change_brightness 1 up
-# Decrease brightness for first monitor: change_brightness 1 down
 change_brightness $1 $2
