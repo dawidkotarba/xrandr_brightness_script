@@ -23,7 +23,6 @@ function change_brightness(){
 
     if [[ ${direction} = "up" ]] ; then
         local new_brightness=`echo ${current_brightness}+${brightness_increase} | bc`
-
     else
         local new_brightness=`echo ${current_brightness}-${brightness_increase} | bc`
     fi
